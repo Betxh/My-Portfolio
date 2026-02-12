@@ -1,0 +1,25 @@
+/* ================================
+   CSS VARIABLES & COLOR SCHEME
+   ================================ */
+
+:root {
+    /* Primary Colors */
+    --primary: #FF6B35;
+    --secondary: #004E89;
+    --accent: #F7931E;
+    --dark: #0B0B0F;
+    --light: #FAFAFA;
+    
+    /* UI Colors */
+    --card: #FFFFFF;
+    --text: #1A1A1A;
+    --text-light: #6B6B6B;
+    --border: #E8E8E8;
+    
+    /* Gradients */
+    --gradient-1: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    --gradient-2: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+    --gradient-3: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);
+    --gradient-4: linear-gradient(135deg, #43e97b 0%, #38f9d7 100%);
+    --gradient-5: linear-gradient(135deg, #fa709a 0%, #fee140 100%);
+}

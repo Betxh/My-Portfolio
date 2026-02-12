@@ -1,0 +1,503 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ashley Sanares — Creative Media Specialist</title>
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700;800;900&family=DM+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Stylesheets -->
+    <link rel="stylesheet" href="css/variables.css">
+    <link rel="stylesheet" href="css/base.css">
+    <link rel="stylesheet" href="css/navigation.css">
+    <link rel="stylesheet" href="css/hero.css">
+    <link rel="stylesheet" href="css/sections.css">
+    <link rel="stylesheet" href="css/modals.css">
+    <link rel="stylesheet" href="css/responsive.css">
+</head>
+<body>
+    <!-- Custom Cursor -->
+    <div class="cursor"></div>
+    <div class="cursor-follower"></div>
+
+    <!-- Navigation -->
+    <nav>
+        <div class="logo">Ashley Sanares</div>
+        <div class="nav-links">
+            <a href="#home" class="nav-link">Home</a>
+            <a href="#work" class="nav-link">Work</a>
+            <a href="#about" class="nav-link">About</a>
+            <button class="theme-toggle" onclick="toggleTheme()">
+                <span id="theme-icon">🌙</span>
+            </button>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero" id="home">
+        <div class="hero-bg"></div>
+        <div class="hero-container">
+            <div class="hero-content">
+                <h1>
+                    Creative<br>
+                    <span class="gradient-text">Media</span><br>
+                    Specialist
+                </h1>
+                <p class="hero-subtitle">Graphic Designer • Video Editor • Developer</p>
+                <p class="hero-description">
+                    I craft exceptional digital experiences through the perfect blend of design sensibility 
+                    and technical expertise. Every project is an opportunity to create something unforgettable.
+                </p>
+                <div class="cta-group">
+                    <a href="#" class="btn btn-primary" onclick="openModal('contact'); return false;">
+                        Let's Work Together
+                        <span>→</span>
+                    </a>
+                    <a href="#" class="btn btn-secondary" onclick="openModal('work'); return false;">
+                        View Portfolio
+                    </a>
+                </div>
+                <div class="stats">
+                    <div class="stat">
+                        <div class="stat-number">10+</div>
+                        <div class="stat-label">Projects</div>
+                    </div>
+                    <div class="stat">
+                        <div class="stat-number">2+</div>
+                        <div class="stat-label">Happy Clients</div>
+                    </div>
+                    <div class="stat">
+                        <div class="stat-number">4 Months</div>
+                        <div class="stat-label">Experience</div>
+                    </div>
+                </div>
+            </div>
+            <div class="hero-visual">
+                <div class="hero-image-frame">
+                    <img src="images/picture.jpg" alt="Ashley Sanares" style="width: 100%; height: 100%; object-fit: cover; border-radius: 27px;">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Desktop Icons Section -->
+    <section class="desktop-section" id="work">
+        <div class="section-header">
+            <span class="section-tag">Explore</span>
+            <div class="title-with-cards">
+                <div class="floating-card floating-card-1">
+                    <h4>Creative</h4>
+                    <p>Expert</p>
+                </div>
+                <div>
+                    <h2 class="section-title">What I Offer</h2>
+                    <p class="section-description">
+                        Click on any card below to discover more about my work, skills, and creative process
+                    </p>
+                </div>
+                <div class="floating-card floating-card-2">
+                    <h4>Technical</h4>
+                    <p>Premium</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="icons-grid">
+            <div class="icon-card clickable" onclick="openModal('about')">
+                <div class="icon-symbol">👤</div>
+                <h3 class="icon-title">About Me</h3>
+                <p class="icon-description">
+                    Learn about my journey, education, and what drives my creative passion
+                </p>
+            </div>
+
+            <div class="icon-card clickable" onclick="openModal('work')">
+                <div class="icon-symbol">💼</div>
+                <h3 class="icon-title">Portfolio</h3>
+                <p class="icon-description">
+                    Explore my featured projects and creative work across different mediums
+                </p>
+            </div>
+
+            <div class="icon-card clickable" onclick="openModal('downloads')">
+                <div class="icon-symbol">📄</div>
+                <h3 class="icon-title">Resume</h3>
+                <p class="icon-description">
+                    Download my professional resume showcasing my experience and qualifications
+                </p>
+            </div>
+
+            <div class="icon-card clickable" onclick="openModal('links')">
+                <div class="icon-symbol">🔗</div>
+                <h3 class="icon-title">Social</h3>
+                <p class="icon-description">
+                    Connect with me across various platforms and social networks
+                </p>
+            </div>
+
+            <div class="icon-card clickable" onclick="openModal('contact')">
+                <div class="icon-symbol">✉️</div>
+                <h3 class="icon-title">Contact</h3>
+                <p class="icon-description">
+                    Get in touch for collaborations, projects, or just to say hello
+                </p>
+            </div>
+
+            <div class="icon-card clickable" onclick="openModal('skills')">
+                <div class="icon-symbol">⚡</div>
+                <h3 class="icon-title">Skills</h3>
+                <p class="icon-description">
+                    Discover my technical expertise and design tools I've mastered
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p>© 2025 Ashley Sanares • Crafted with passion and precision</p>
+    </footer>
+
+    <!-- About Modal -->
+    <div id="about-modal" class="modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <div class="modal-title-group">
+                    <div class="modal-icon">👤</div>
+                    <h2 class="modal-title">About Me</h2>
+                </div>
+                <button class="modal-close clickable" onclick="closeModal('about')">×</button>
+            </div>
+            <div class="modal-body">
+                <div class="modal-section">
+                    <h3>Hello! I'm a Versatile Digital Professional</h3>
+                    <p>
+                        Based in the Philippines, I'm a freelance, creative and technical specialist with a background in Computer Systems Servicing. 
+                        I used to be an engineering student, now I'm a Computer Science student.
+                    </p>
+                    <p>
+                        My work sits at the intersection of art and technology. I believe that the best 
+                        digital experiences come from combining beautiful design with robust technical execution.
+                    </p>
+                </div>
+
+                <div class="modal-section">
+                    <h3>What I Do</h3>
+                    <p>I specialize in:</p>
+                    <ul style="list-style: none; padding: 0; margin: 20px 0;">
+                        <li style="padding: 10px 0; border-bottom: 1px solid var(--border);">
+                            ✓ Creating hand-drawn illustrations and graphics
+                        </li>
+                        <li style="padding: 10px 0; border-bottom: 1px solid var(--border);">
+                            ✓ Video Editing and motion graphics for dynamic storytelling
+                        </li>
+                        <li style="padding: 10px 0; border-bottom: 1px solid var(--border);">
+                            ✓ UI/UX design and interactive prototyping
+                        </li>
+                        <li style="padding: 10px 0;">
+                            ✓ Frontend development with modern frameworks
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="modal-section">
+                    <h3>Interests & Hobbies</h3>
+                    <p>
+                        When I'm not coding or designing, you'll find me exploring game development, 
+                        singing songs, making art, playing video games, or creating content on YouTube.
+                    </p>
+                </div>
+
+                <div class="modal-section">
+                    <h3>Languages</h3>
+                    <p>
+                        Native fluency in English and Filipino (Tagalog).
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Work Modal -->
+    <div id="work-modal" class="modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <div class="modal-title-group">
+                    <div class="modal-icon">💼</div>
+                    <h2 class="modal-title">Portfolio</h2>
+                </div>
+                <button class="modal-close clickable" onclick="closeModal('work')">×</button>
+            </div>
+            <div class="modal-body">
+                <div class="modal-section">
+                    <h3>Featured Projects</h3>
+                    <p>
+                        Here's a selection of my recent work showcasing web development, animation, 
+                        and design projects that have helped clients achieve their goals.
+                    </p>
+                </div>
+
+                <div class="projects-grid">
+                    <a href="https://taftsti-my.sharepoint.com/:f:/g/personal/sanares_469842_pasay-edsa_sti_edu_ph/IgAWl95meDSJTaiEZaEzeq-9AXk25B2wUpR31yWISmfBpcM?e=D76Be6" target="_blank" class="project-card">
+                        <div class="project-image"></div>
+                        <div class="project-details">
+                            <h4>Videos I Edited</h4>
+                            <p>Professional video editing projects showcasing motion graphics, transitions, and color grading</p>
+                            <div class="project-tags">
+                                <span class="tag">Video Editing</span>
+                                <span class="tag">Motion Graphics</span>
+                                <span class="tag">Post-Production</span>
+                            </div>
+                        </div>
+                    </a>
+
+                    <a href="https://taftsti-my.sharepoint.com/:f:/g/personal/sanares_469842_pasay-edsa_sti_edu_ph/IgAWl95meDSJTaiEZaEzeq-9AXk25B2wUpR31yWISmfBpcM?e=D76Be6" target="_blank" class="project-card">
+                        <div class="project-image"></div>
+                        <div class="project-details">
+                            <h4>Graphic Designs</h4>
+                            <p>Creative graphic design work including branding, social media assets, and visual identity designs</p>
+                            <div class="project-tags">
+                                <span class="tag">Graphic Design</span>
+                                <span class="tag">Branding</span>
+                                <span class="tag">Visual Design</span>
+                            </div>
+                        </div>
+                    </a>
+
+                    <div class="project-card">
+                        <div class="project-image"></div>
+                        <div class="project-details">
+                            <h4>This Portfolio Website</h4>
+                            <p>A modern, responsive portfolio website built with HTML, CSS, and JavaScript featuring smooth animations</p>
+                            <div class="project-tags">
+                                <span class="tag">Web Development</span>
+                                <span class="tag">Frontend</span>
+                                <span class="tag">UI/UX</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <a href="http://tee.pub/lic/fashionablylate" target="_blank" class="project-card">
+                        <div class="project-image"></div>
+                        <div class="project-details">
+                            <h4>T-Shirt Designs</h4>
+                            <p>Custom t-shirt designs created and sold featuring unique graphics and creative artwork</p>
+                            <div class="project-tags">
+                                <span class="tag">Graphic Design</span>
+                                <span class="tag">Merch</span>
+                                <span class="tag">Product Design</span>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </div> 
+             </div>
+
+                 <a href="https://www.facebook.com/nsxgaminghub/" target="_blank" class="project-card">
+                        <div class="project-image"></div>
+                        <div class="project-details">
+                            <h4>Online Shop</h4>
+                            <p>Full-featured online selling platform where I showcase and sell design products</p>
+                            <div class="project-tags">
+                                <span class="tag">E-Commerce</span>
+                                <span class="tag">Sales</span>
+                                <span class="tag">Business</span>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+    <!-- Skills Modal -->
+    <div id="skills-modal" class="modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <div class="modal-title-group">
+                    <div class="modal-icon">⚡</div>
+                    <h2 class="modal-title">Skills & Tools</h2>
+                </div>
+                <button class="modal-close clickable" onclick="closeModal('skills')">×</button>
+            </div>
+            <div class="modal-body">
+                <div class="modal-section">
+                    <h3>Development & Technical</h3>
+                    <div class="skills-grid">
+                        <div class="skill-item">JavaScript</div>
+                        <div class="skill-item">Python</div>
+                        <div class="skill-item">HTML/CSS</div>
+                        <div class="skill-item">C++</div>
+                        <div class="skill-item">VB.NET</div>
+                        <div class="skill-item">Visual Studio IDE</div>
+                        <div class="skill-item">Computer Systems Servicing</div>
+                        <div class="skill-item">System Integration</div>
+                        <div class="skill-item">Network Management</div>
+                    </div>
+                </div>
+
+                <div class="modal-section">
+                    <h3>Design & Creative</h3>
+                    <div class="skills-grid">
+                        <div class="skill-item">Figma</div>
+                        <div class="skill-item">DaVinci Resolve</div>
+                        <div class="skill-item">Procreate</div>
+                        <div class="skill-item">Canva</div>
+                        <div class="skill-item">CapCut</div>
+                        <div class="skill-item">Social Media Management</div>
+                        <div class="skill-item">Video Editing</div>
+                        <div class="skill-item">Graphic Design</div>
+                    </div>
+                </div>
+
+                <div class="modal-section">
+                    <h3>What Sets Me Apart</h3>
+                    <p>
+                        I bridge the gap between technical infrastructure and creative execution. With TESDA NC II
+                        certification in Computer Systems Servicing, I understand both the creative tools and the 
+                        technical foundations that power them.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Links Modal -->
+    <div id="links-modal" class="modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <div class="modal-title-group">
+                    <div class="modal-icon">🔗</div>
+                    <h2 class="modal-title">Connect With Me</h2>
+                </div>
+                <button class="modal-close clickable" onclick="closeModal('links')">×</button>
+            </div>
+            <div class="modal-body">
+                <div class="modal-section">
+                    <h3>Find Me Online</h3>
+                    <p>I'm active across various platforms. Follow me to stay updated!</p>
+                </div>
+
+                <div class="social-grid">
+                    <a href="https://youtube.com/@alwaysfashionablylate" target="_blank" class="social-item clickable">
+                        <div class="social-icon">📺</div>
+                        <span class="social-name">YouTube</span>
+                    </a>
+                    <a href="https://www.instagram.com/latebut.luxe?igsh=MWsyY3FwZm9jdmx4bQ==" target="_blank" class="social-item clickable">
+                        <div class="social-icon">📷</div>
+                        <span class="social-name">Instagram</span>
+                    </a>
+                    <a href="https://www.facebook.com/nsxgaminghub/" target="_blank" class="social-item clickable">
+                        <div class="social-icon">👥</div>
+                        <span class="social-name">Facebook</span>
+                    </a>
+                    <a href="http://tee.pub/lic/fashionablylate" target="_blank" class="social-item clickable">
+                        <div class="social-icon">👕</div>
+                        <span class="social-name">Teespring Shop</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Contact Modal -->
+    <div id="contact-modal" class="modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <div class="modal-title-group">
+                    <div class="modal-icon">✉️</div>
+                    <h2 class="modal-title">Get In Touch</h2>
+                </div>
+                <button class="modal-close clickable" onclick="closeModal('contact')">×</button>
+            </div>
+            <div class="modal-body">
+                <div class="modal-section">
+                    <h3>Let's Create Something Amazing</h3>
+                    <p>
+                        I'm always excited to work on new projects and collaborate with passionate people. 
+                        Whether you have a specific project in mind or just want to chat about possibilities, 
+                        I'd love to hear from you.
+                    </p>
+                </div>
+
+                <div class="contact-box">
+                    <div class="email-icon">📧</div>
+                    <h3>Email Me Directly</h3>
+                    <div class="email">ashleysanares@gmail.com</div>
+                    <a href="mailto:ashleysanares@gmail.com" class="btn-white clickable">Send Email →</a>
+                </div>
+
+                <div class="modal-section">
+                    <h3>What to Expect</h3>
+                    <p>
+                        When you reach out, I typically respond within 24 hours. I'll ask about your project 
+                        goals, timeline, and budget to ensure we're a good fit.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Resume Modal -->
+    <div id="downloads-modal" class="modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <div class="modal-title-group">
+                    <div class="modal-icon">📄</div>
+                    <h2 class="modal-title">My Resume</h2>
+                </div>
+                <button class="modal-close clickable" onclick="closeModal('downloads')">×</button>
+            </div>
+            <div class="modal-body">
+                <div class="modal-section">
+                    <h3>Professional Resume</h3>
+                    <p>
+                        Here's my professional resume showcasing my skills, experience, and qualifications. 
+                        Feel free to download it for your records or job application processes.
+                    </p>
+                </div>
+
+                <div style="text-align: center; margin: 40px 0;">
+                    <div style="background: var(--gradient-1); border-radius: 20px; padding: 60px; margin-bottom: 30px; display: inline-block;">
+                        <div style="font-size: 64px; margin-bottom: 20px;">📋</div>
+                        <h3 style="margin: 0 0 10px 0; color: white; font-family: 'Playfair Display', serif; font-size: 28px;">Ashley Sanares</h3>
+                        <p style="margin: 0; color: rgba(255, 255, 255, 0.9); font-size: 16px;">Creative Media Specialist</p>
+                    </div>
+                    <div>
+                        <a href="documents/My_Professional_Resume.pdf" download class="btn btn-primary" style="display: inline-block;">
+                            Download Resume
+                            <span>↓</span>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="modal-section">
+                    <h3>Quick Overview</h3>
+                    <ul style="list-style: none; padding: 0; margin: 20px 0;">
+                        <li style="padding: 12px 0; border-bottom: 1px solid var(--border); display: flex; align-items: center;">
+                            <span style="font-size: 20px; margin-right: 15px;">🎓</span>
+                            <span>TESDA NC II Certified in Computer Systems Servicing</span>
+                        </li>
+                        <li style="padding: 12px 0; border-bottom: 1px solid var(--border); display: flex; align-items: center;">
+                            <span style="font-size: 20px; margin-right: 15px;">💻</span>
+                            <span>Multi-Stack Programming & System Optimization</span>
+                        </li>
+                        <li style="padding: 12px 0; border-bottom: 1px solid var(--border); display: flex; align-items: center;">
+                            <span style="font-size: 20px; margin-right: 15px;">🎬</span>
+                            <span>Creative Design & Multimedia Production</span>
+                        </li>
+                        <li style="padding: 12px 0; display: flex; align-items: center;">
+                            <span style="font-size: 20px; margin-right: 15px;">✨</span>
+                            <span>Technical Operations & Network Management</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- JavaScript -->
+    <script src="js/main.js"></script>
+</body>
+</html>
